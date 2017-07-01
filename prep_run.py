@@ -121,8 +121,7 @@ for item in paths:
 		for var in vox:
 			if thing in src:
 				if var in src:					
-					os.system('prepfold -p ' + dict2[key[3]] + '')
-					print ('prepfold -p ' + dict2[key][2] + '-pd ' + dict2[key][3] + ' -dm ' + 
+					os.system('prepfold -p ' + dict2[key][2] + '-pd ' + dict2[key][3] + ' -dm ' + 
 							dict2[key][4] + '-n 128 -nsub 128 -npart 60 -fine -nosearch -noxwin ' 
 							'-mask ' + rfi_v + ' ' +thing)
 	dir = os.getcwd()
