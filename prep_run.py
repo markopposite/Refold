@@ -86,10 +86,6 @@ for str in l:
 	vox.append(v)
 	vac.append(c[1])	
 
-rfi_prep = '_rfifind.mask'
-for rfi_v in v:
-	rfi_v = v + rfi_prep
-#print rfi_v
 ##################################################################################
 ###### Build a system to run 'rfifind' and 'prepfold' in subdirectories #########
 ##################################################################################
@@ -123,7 +119,7 @@ for item in paths:
 				if var in src:					
 					os.system('prepfold -p ' + dict2[key][2] + ' -pd ' + dict2[key][3] + ' -dm ' + 
 							dict2[key][4] + ' -n 128 -nsub 128 -npart 60 -fine -nosearch -noxwin ' 
-							'-mask ' + rfi_v + ' ' +thing)
+							'-mask ' + var + '_rfifind.mask' + ' ' + thing)
 	dir = os.getcwd()
 	os.chdir('..')
 print 'done'
