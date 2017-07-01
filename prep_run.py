@@ -89,7 +89,7 @@ for str in l:
 rfi_prep = '_rfifind.mask'
 for rfi_v in v:
 	rfi_v = v + rfi_prep
-print rfi_v
+#print rfi_v
 ##################################################################################
 ###### Build a system to run 'rfifind' and 'prepfold' in subdirectories #########
 ##################################################################################
@@ -115,7 +115,7 @@ for item in paths:
 			if thing in src:
 				if var in src:
 					os.system('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
-					print ('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
+					#print ('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
 
 	for thing in vac:
 		for var in vox:
