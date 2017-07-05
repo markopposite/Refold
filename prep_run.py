@@ -106,20 +106,20 @@ for item in paths:
 						os.symlink(src,dst)
 	except:
 		pass
-	for var in vox:
-		for thing in vac:
-			if thing in src:
-				if var in src:
-					os.system('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
-					#print ('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
-
-	for thing in vac:
 		for var in vox:
-			if thing in src:
-				if var in src:					
-					os.system('prepfold -p ' + dict2[key][2] + ' -pd ' + dict2[key][3] + ' -dm ' + 
-							dict2[key][4] + ' -n 128 -nsub 128 -npart 60 -fine -nosearch -noxwin ' 
-							'-mask ' + var + '_rfifind.mask' + ' ' + thing)
+			for thing in vac:
+				if thing in src:
+					if var in src:
+						os.system('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
+						#print ('rfifind -o '+ var + ' -time 1.0 -timesig 3.0 ' + thing)
+
+		for thing in vac:
+			for var in vox:
+				if thing in src:
+					if var in src:					
+						os.system('prepfold -p ' + dict2[key][2] + ' -pd ' + dict2[key][3] + ' -dm ' + 
+								dict2[key][4] + ' -n 128 -nsub 128 -npart 60 -fine -nosearch -noxwin ' 
+								'-mask ' + var + '_rfifind.mask' + ' ' + thing)
 	dir = os.getcwd()
 	os.chdir('..')
 print 'done'
