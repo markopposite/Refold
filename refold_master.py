@@ -8,8 +8,6 @@ from commands import *
 from glob import glob
 import csv, os, sys
 
-print '\nTROUBLESHOOTING VERSION of prep_run.py\n'
-
 ### Define the current and parent directories
 direct = os.getcwd()
 parent = os.path.abspath(os.path.join(direct, os.pardir))
