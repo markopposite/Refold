@@ -1,5 +1,5 @@
 ### Script for refolding pulsar candidates in the GBNCC folder
-### __author__   Mark Poe
+### __author(s)__   Mark Poe, Kaleb Maraccini  __
 
 ### Takes .csv file name as command line option; 'python script.py spreadsheet.csv'
 
